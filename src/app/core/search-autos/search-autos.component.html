@@ -1,0 +1,18 @@
+
+
+<ion-content>
+  <ion-searchbar [(ngModel)]="terminoBusqueda" (input)="buscarAuto(terminoBusqueda)"></ion-searchbar>
+
+  <ion-list *ngIf="terminoBusqueda">
+    <ion-item *ngFor="let auto of autosEncontrados">
+     <button class="texto" (click)="compararAuto(auto)">{{ auto  }}</button>
+   
+
+    </ion-item>
+  </ion-list>
+
+
+  <p *ngIf="autosEncontrados.length === 0 && terminoBusqueda.trim() !== ''">
+    No se encontraron autos.
+  </p>
+</ion-content>

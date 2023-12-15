@@ -1,0 +1,19 @@
+<!-- search.component.html -->
+<ion-content [fullscreen]="true">
+  <section>
+    <a *ngFor="let item of categorias" [routerLink]="['/categorias', item.nombre]">
+      <div class="categoria-item" 
+          
+           [ngClass]="{
+             'categoria-suv': item.nombre  === 'SUV',
+             'categoria-sedanes': item.nombre === 'Sedanes',
+             'categoria-hatchback': item.nombre === 'Hatchback',
+             'categoria-cabriolet': item.nombre === 'Cabriolet'
+           }">
+        <span>{{ item.nombre }}</span>
+        <img [src]="item.fotoUrl" alt="{{ item.nombre }}">
+      </div>
+    </a>
+  </section>
+</ion-content>
+
