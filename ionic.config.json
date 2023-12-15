@@ -1,0 +1,7 @@
+{
+  "name": "alquiler autos",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
